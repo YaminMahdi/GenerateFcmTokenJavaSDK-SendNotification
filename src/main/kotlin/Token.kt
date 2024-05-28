@@ -1,4 +1,4 @@
 data class Token(
     val accessToken: String = "",
-    val expirationTime: Long = 0
+    val expirationTime: Long = 0L
 )
