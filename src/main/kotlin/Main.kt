@@ -23,7 +23,7 @@ fun sendNotification(){
                     header(HttpHeaders.Authorization, "Bearer "+getAccessToken())
                     setBody(Gson().toJson(FcmBody()))
                 }.bodyAsText()
-        println("hi $responseBody")
+        println("sendNotification: $responseBody")
     }
 }
 
