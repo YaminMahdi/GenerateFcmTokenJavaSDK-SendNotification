@@ -40,6 +40,6 @@ bin/
 
 ### Mac OS ###
 .DS_Store
-/src/main/resources/mistry.json
-/src/main/resources/othoba.json
+/src/main/resources/*
+!/src/main/resources/fcm.json
 /token.json
