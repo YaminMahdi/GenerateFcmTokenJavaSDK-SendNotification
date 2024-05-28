@@ -20,7 +20,7 @@ fun sendNotification(){
         val responseBody =
             HttpClient(CIO)
                 .post("https://fcm.googleapis.com/v1/projects/othobaexpress/messages:send") {
-                    header(HttpHeaders.Authorization, "Bearer "+getAccessToken())
+                    header(HttpHeaders.Authorization, getAccessToken())
                     setBody(Gson().toJson(FcmBody()))
                 }.bodyAsText()
         println("sendNotification: $responseBody")
@@ -57,10 +57,10 @@ fun getAccessToken(): String{
         file.writeText(newTokenJson)
 
         println("getAccessToken suc: \n${googleCredentials.accessToken.tokenValue}")
-        googleCredentials.accessToken.tokenValue
+        "Bearer ${googleCredentials.accessToken.tokenValue}"
     }
     else {
         println("getAccessToken old: \n${oldToken}")
-        oldToken
+        "Bearer $oldToken"
     }
 }
