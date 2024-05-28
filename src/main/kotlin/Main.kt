@@ -42,7 +42,7 @@ fun getAccessToken(): String{
     val oldToken =  getUnExpiredToken()
 
     return if(oldToken == null){
-        val json= Resources.getResource("othoba.json").openStream()
+        val json= Resources.getResource("fcm.json").openStream()
         val scopes = listOf("https://www.googleapis.com/auth/firebase.messaging")
         val googleCredentials  =
             GoogleCredentials
