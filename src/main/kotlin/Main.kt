@@ -28,7 +28,11 @@ fun sendNotification(){
 }
 
 fun getUnExpiredToken(): String?{
-    val tokenJson= File("token.json").readText()
+    val tokenJson = try{
+        File("token.json").readText()
+    }catch (e: Exception){
+        File("token.json").writeText("") ; return null
+    }
     val token = Gson().fromJson(tokenJson, Token::class.java) ?: return null
 
     return if(System.currentTimeMillis() < token.expirationTime)

@@ -13,6 +13,7 @@ repositories {
 dependencies {
     implementation("io.ktor:ktor-client-core:$ktor")
     implementation("io.ktor:ktor-client-cio:$ktor")
+    implementation("org.slf4j:slf4j-nop:1.7.36")
     implementation ("com.google.code.gson:gson:2.11.0")
     implementation("com.google.auth:google-auth-library-oauth2-http:1.19.0")
     testImplementation("org.jetbrains.kotlin:kotlin-test")
