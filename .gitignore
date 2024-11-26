@@ -9,6 +9,9 @@ build/
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
+.idea/caches/deviceStreaming.xml
+.idea/migrations.xml
+.idea/runConfigurations.xml
 *.iws
 *.iml
 *.ipr
@@ -43,3 +46,4 @@ bin/
 /src/main/resources/*
 !/src/main/resources/fcm.json
 /token.json
+local.properties

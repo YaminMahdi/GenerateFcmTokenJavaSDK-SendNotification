@@ -3,7 +3,7 @@ data class FcmBody(
 ) {
     data class Message(
         val data: Data = Data(),
-        val notification: Notification = Notification(),
+//        val notification: Notification = Notification(),
         val topic: String = "test" // your_topic_name
     ) {
         data class Data(

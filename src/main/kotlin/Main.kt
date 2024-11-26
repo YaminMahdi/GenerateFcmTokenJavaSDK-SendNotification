@@ -19,7 +19,7 @@ fun sendNotification(){
     runBlocking {
         val responseBody =
             HttpClient(CIO)
-                .post("https://fcm.googleapis.com/v1/projects/othobaexpress/messages:send") {
+                .post("https://fcm.googleapis.com/v1/projects/omekitchen-6bc2f/messages:send") {
                     header(HttpHeaders.Authorization, getAccessToken())
                     setBody(Gson().toJson(FcmBody()))
                 }.bodyAsText()
