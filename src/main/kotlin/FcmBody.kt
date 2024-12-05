@@ -4,7 +4,8 @@ data class FcmBody(
     data class Message(
         val data: Data = Data(),
 //        val notification: Notification = Notification(),
-        val topic: String = "test" // your_topic_name
+        val topic: String = "test", // your_topic_name
+//        val token: String = "bk3RNwTe3H0:CI2k_HHwgIpoDKCIZvvDMExUdFQ3P1..." // your_token
     ) {
         data class Data(
             val title: String = "Hello From Mahdi", // your_title_here
