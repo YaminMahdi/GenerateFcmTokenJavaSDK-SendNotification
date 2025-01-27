@@ -9,7 +9,7 @@ data class FcmBody(
     ) {
         data class Data(
             val title: String = "Hello From Mahdi", // your_title_here
-            val body: String = "Don't touch my tala lala", // your_body_here
+            val body: String = "Nothing to say", // your_body_here
             val id: String = "", // your_assign_order_id
             val image: String = "", // your_picture_url
             val latitude: String = "", // your_latitude
